@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+ <style>
+        /* Pequeno ajuste para garantir que o rodapé fique no fim da página se houver pouco conteúdo */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .conteudo-principal {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-    
-</body>
+
+    <!-- 1. CABEÇALHO COM NAV-BAR DO BOOTSTRAP -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Meu Site</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. DIV / CONTEÚDO PRINCIPAL (Centralizado e Responsivo) -->
+    <div class="conteudo-principal bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-md-start">
+                    <h1 class="display-4 fw-bold">Bem-vindo à Página</h1>
+                    <p class="lead">Esta é a sua div principal estruturada com o sistema de grids e containers do Bootstrap.</p>
+                    <hr class="my-4">
+                    <p>O conteúdo aqui dentro se adapta automaticamente ao tamanho de qualquer tela.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. RODAPÉ COM TEXTO E IMAGEM -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-2">&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+            <!-- Substitua o src pelo link da sua imagem. 'img-fluid' a torna responsiva -->
+            <img src="https://placehold.co" alt="Logo do Rodapé" class="img-fluid" style="max-height: 50px;">
+        </div>
 </html>

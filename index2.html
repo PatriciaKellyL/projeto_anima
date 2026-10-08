@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style>
+        /* Variáveis de Cores Personalizadas */
+        :root {
+            --cor-suave: #e4d9dc;
+            --cor-verde: #bdd8a4;
+            --cor-rosa: #ffd4d4;
+            --cor-grafite: #2C2C2C;
+            --cor-amarelo: #feda18;
+        }
+
+        /* Ajuste estrutural do rodapé */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--cor-grafite);
+        }
+        main {
+            flex: 1;
+        }
+
+        /* 1. Cabeçalho */
+        .custom-navbar {
+            background-color: var(--cor-suave) !important;
+        }
+        .logo-verde {
+            
+        }
+        .logo-rosa { color: var(--cor-rosa); font-weight: bold; }
+
+        /* 2. Seção Principal (Hero) */
+       /* .hero-section {
+            /* Substitua a URL abaixo pela sua imagem de fundo */
+           /* background: linear-gradient(rgba(228, 217, 220, 0.85), rgba(228, 217, 220, 0.85)), url('https://picsum.photos') no-repeat center center/cover;
+            padding: 100px 0;
+        } */
+        .btn-agendar {
+            background-color: var(--cor-amarelo) !important;
+            color: var(--cor-grafite) !important;
+            font-weight: bold;
+            border: none;
+            padding: 12px 30px;
+            transition: transform 0.2s;
+        }
+        .btn-agendar:hover {
+            transform: scale(1.05);
+            background-color: #e5c415 !important;
+        }
+
+        /* 3. Seção Sobre Mim */
+        .sobre-section {
+            background-color: var(--cor-verde);
+        }
+        .caixa-flutuante {
+            background-color: #ffffff;
+            border-bottom: 8px solid var(--cor-rosa);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* 4. Área de Especialidades */
+        .especialidades-section {
+            background-color: #ffffff;
+        }
+        .card-especialidade-1 { border-top: 5px solid var(--cor-rosa); border-radius: 15px; }
+        .card-especialidade-2 { border-top: 5px solid var(--cor-verde); border-radius: 15px; }
+
+        /* 5. Rodapé */
+        .custom-footer {
+            background-color: var(--cor-grafite);
+            color: #ffffff;
+        }
+        .footer-logo {
+            max-height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .imagem{
+            background-image: url(img/Logo.png);
+            background-repeat: no-repeat;
+            
+            /* Alinha na DIREITA (horizontal) e no CENTRO (vertical) */
+            background-position: right center;
+            
+            /* Opcional: Define o tamanho da imagem para não quebrar o layout */
+            background-size: contain; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. CABEÇALHO (HEADER) & MENU -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fs-3" href="#">
+                    <span class="logo-verde"><img src="img/Logo2.png" width="70%"></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">Início</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#sobre">Sobre Nós & Missão</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#especialidades">Nosso Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-agendar btn-sm ms-lg-3 text-dark mt-2 mt-lg-0" href="#">Agendar Consulta</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 2. SEÇÃO PRINCIPAL (HERO / BANNER DE ENTRADA) -->
+        <section class="hero-section text-center text-md-start">
+            <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+                <div style="display: flex;">
+                    <div style="flex: 1;">
+                        
+                            
+                                <h1 class="display-4 fw-bold mb-3" style="color: var(--cor-grafite);">Cuidado acolhedor para a sua mente</h1>
+                                <p class="lead mb-4" style="color: #4A4A4A;">Encontre um espaço seguro para vivenciar seu processo de crescimento, cura e autoconhecimento guiado com sensibilidade.</p>
+                                <!-- Botão de Conversão Principal -->
+                                <a href="#" class="btn btn-agendar btn-lg shadow">Agendar Consulta</a>
+
+
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="align-items-center g-5">
+                            <img src="img/Logo.png" width="80%" style="padding-left: 10%;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEÇÃO "SOBRE MIM" OU "ABORDAGEM TERAPÊUTICA" -->
+        <section id="sobre" class="sobre-section py-5 text-dark">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h2 class="display-5 fw-bold mb-4">Minha Abordagem</h2>
+                        <p class="fs-5">O processo terapêutico é um caminho de retorno para si mesmo. Através do acolhimento psicológico baseado no respeito, criamos o ambiente ideal para florescer a saúde mental e superar desafios emocionais.</p>
+                    </div>
+                    <!-- Caixa flutuante trazendo calor humano com o detalhe em Rosa -->
+                    <div class="col-md-6">
+                        <div class="caixa-flutuante p-4 p-md-5">
+                            <h3 class="h4 mb-3" style="color: var(--cor-grafite);">Acolhimento Humano</h3>
+                            <p class="mb-0" style="color: #555;">"Olhar para as nossas vulnerabilidades acompanhado de suporte profissional é o primeiro e mais corajoso passo em direção ao bem-estar duradouro."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ÁREA DE ESPECIALIDADES / BLOG -->
+        <section id="especialidades" class="especialidades-section py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-5" style="color: var(--cor-grafite);">Áreas de Atendimento</h2>
+                    <p class="text-muted">Serviços especializados estruturados de forma personalizada.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Serviço 1: Borda Rosa -->
+                    <div class="col-md-4">
+                        <div class="card card-especialidade-1 h-100 shadow-sm p-4">
+                            <div class="fs-2 mb-3">🧠</div>
+                            <h3 class="h5 fw-bold">Terapia Individual</h3>
+                            <p class="text-muted mb-0">Processo focado no seu autoconhecimento, superação de traumas e fortalecimento interno adaptado à sua rotina.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço 2: Borda Verde -->
+                    <div class="col-md-4">
+                        <div class="card card-especialidade-2 h-100 shadow-sm p-4">
+                            <div class="fs-2 mb-3">💬</div>
+                            <h3 class="h5 fw-bold">Ansiedade e Estresse</h3>
+                            <p class="text-muted mb-0">Estratégias e práticas terapêuticas estruturadas para manejar crises, desacelerar a mente e retomar o equilíbrio.</p>
+                        </div>
+                    </div>
+                    <!-- Serviço 3: Borda Rosa -->
+                    <div class="col-md-4">
+                        <div class="card card-especialidade-1 h-100 shadow-sm p-4">
+                            <div class="fs-2 mb-3">👥</div>
+                            <h3 class="h5 fw-bold">Terapia de Casal</h3>
+                            <p class="text-muted mb-0">Mediação sensível voltada para a melhoria da comunicação, resolução de conflitos e reconstrução de laços de afeto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 5. RODAPÉ (FOOTER) -->
+    <footer class="custom-footer py-5">
+        <div class="container">
+            <div class="row align-items-center g-4 text-center text-md-start">
+                <div class="col-md-6">
+                    <h4 class="h5 fw-bold mb-2">Contato & Localização</h4>
+                    <p class="mb-1 text-secondary">📍 Av. Paulista, 1000 - Sala 42, São Paulo - SP</p>
+                    <p class="mb-0 text-secondary">✉️ contato@vitamente.com.br | 📞 (11) 99999-9999</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <!-- Rodapé fechando com imagem/logo solicitada -->
+                    <img src="https://placehold.co" alt="Logo do Rodapé" class="img-fluid footer-logo mb-3">
+                    <p class="small text-secondary mb-0">&copy; 2026 VitaMente. Todos os direitos reservados. CRP 06/XXXXX</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
